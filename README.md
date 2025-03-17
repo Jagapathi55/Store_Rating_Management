@@ -1,116 +1,88 @@
-# 🌟 RateMyStore
+# 🏪 Store Rating Web Application
 
-RateMyStore is a feature-rich web application that allows users to rate and review registered stores. Users can sign up, browse stores, and submit ratings (1-5 stars). Store owners can monitor feedback, while admins manage users and store listings.
-
----
-
-## 🚀 Features
-
-### 👥 Users
-- 📝 Sign up, log in, and browse stores
-- ⭐️ Submit ratings and reviews for stores
-- 📖 View store ratings and feedback from other users
-
-### 🏪 Store Owners
-- 📊 Monitor ratings and customer feedback
-- 💬 Respond to reviews (optional feature)
-- 📈 Track overall store performance
-
-### 🔧 Admins
-- 👤 Manage users (approve, block, or delete accounts)
-- 🏬 Manage stores (approve, edit, or remove store listings)
-
----
+## 📌 Overview
+This is a web application that allows users to submit ratings for stores registered on the platform. The system includes role-based access with functionalities tailored to system administrators, normal users, and store owners.
 
 ## 🛠 Tech Stack
+- **Backend**: 🚀 Express.js
+- **Database**: 🗄 MySQL
+- **Frontend**: 🎨 React.js
 
-### 🌐 Frontend
-- ⚛️ React.js - Modern, fast, and dynamic UI
-- 🚏 React Router - Client-side routing
-- 🔗 Axios - Handling API requests
-- 🎨 Bootstrap / TailwindCSS (Optional) - Responsive styling
+## 🌟 Features
+### 🔹 System Administrator
+- ➕ Add new stores, normal users, and admin users.
+- 📊 Access a dashboard displaying:
+  - 👥 Total number of users
+  - 🏪 Total number of stores
+  - ⭐ Total number of submitted ratings
+- 👀 Manage users by adding, viewing, filtering, and editing user details.
+- 🏢 View store details including name, email, address, and rating.
+- 🔍 Apply filters on listings based on name, email, address, and role.
+- 🔓 Logout functionality.
 
-### 🖥 Backend
-- 🏗 Node.js & Express.js - Robust API backend
-- 🗄 MySQL - Structured database for storing users, stores, and reviews
-- 🔐 JWT (JSON Web Token) - Secure authentication and session management
-- 🔑 Bcrypt.js - Password encryption for enhanced security
+### 👤 Normal User
+- 📝 Sign up and log in.
+- 🔑 Update password after logging in.
+- 🏪 View a list of all registered stores.
+- 🔍 Search for stores by name and address.
+- ⭐ Submit, view, and modify ratings (1-5) for stores.
+- 🔓 Logout functionality.
 
----
+### 🏬 Store Owner
+- 🔑 Log in and update password.
+- 📊 View a dashboard displaying:
+  - 👥 List of users who rated their store.
+  - ⭐ Average store rating.
+- 🔓 Logout functionality.
 
-## ⚡️ Installation and Setup
+## ✅ Form Validations
+- **📛 Name**: Min 20 characters, Max 60 characters.
+- **🏠 Address**: Max 400 characters.
+- **🔑 Password**: 8-16 characters, must include at least one uppercase letter and one special character.
+- **📧 Email**: Must follow standard email validation rules.
 
-### 📌 Prerequisites
-Ensure you have the following installed:
-- ✅ Node.js (Latest LTS version)
-- ✅ MySQL Database
-- ✅ npm or yarn
+## 🚀 Additional Features
+- 🔄 All tables support sorting (ascending/descending) for key fields (Name, Email, etc.).
+- ✅ Best practices followed for both frontend and backend development.
+- 🎯 Optimized database schema design adhering to best practices.
 
-### 📥 Clone the Repository
-  git clone https://github.com/your-username/ratemystore.git
-  cd ratemystore
-
-### ⚙️ Backend Setup
-1. Navigate to the backend directory:
-cd backend
-2. Install dependencies:
-npm install
-3. Configure environment variables:
-Create a .env file and add the following:
-PORT=5000
-DB_HOST=your_db_host
-DB_USER=your_db_user
-DB_PASSWORD=your_db_password
-DB_NAME=ratemystore_db
-JWT_SECRET=your_secret_key
-4. Run the backend server:
-npm start
-
-### 🎨 Frontend Setup
-1. Navigate to the frontend directory:
-cd frontend
-2. Install dependencies:
-npm install
-3. Start the development server:
-npm start
-
-The frontend will be available at http://localhost:3000/.
-
----
-
-## 🔐 Security & Authentication
-- 🔑 JWT-based authentication ensures secure API access.
-- 🔒 Bcrypt.js encrypts user passwords.
-- 🏆 Role-based access control (Admin, Store Owner, User) ensures secure operations.
-
----
-
-## 🔮 Future Enhancements
-- 🔍 Advanced Search & Filters - Sort by ratings, location, and category
-- 🖼 Image Uploads - Allow users to add photos with reviews
-- 📊 Analytics Dashboard - Store owners can track customer trends
-- 📩 Email Notifications - Notify users of replies to their reviews
-
----
+## ⚙️ Installation and Setup
+1. 📥 Clone the repository:
+   ```sh
+   git clone https://github.com/Jagapathi55/Store_Rating_Management.git
+   ```
+2. 📂 Navigate to the project directory:
+   ```sh
+   cd Store_Rating_Management
+   ```
+3. 📦 Install backend dependencies:
+   ```sh
+   cd backend
+   npm install
+   ```
+4. ⚙️ Configure database connection in `.env` file.
+5. ▶️ Run the backend server:
+   ```sh
+   npm start
+   ```
+6. 📦 Install frontend dependencies:
+   ```sh
+   cd ../frontend
+   npm install
+   ```
+7. ▶️ Start the frontend application:
+   ```sh
+   npm start
+   ```
+8. 🌐 Access the application at `http://localhost:3000`.
 
 ## 🤝 Contributing
-Contributions are welcome! To contribute:
-1. 🍴 Fork the repository
-2. 🌿 Create a new branch (git checkout -b feature-name)
-3. 💾 Commit your changes (git commit -m 'Add feature X')
-4. 📤 Push to the branch (git push origin feature-name)
-5. 🔀 Open a pull request
-
----
+Feel free to fork the repository, make changes, and submit pull requests.
 
 ## 📜 License
 This project is licensed under the MIT License.
 
 ---
+**👨‍💻 Author**: [Jagapathi]  
+**🐙 GitHub**: [Jagapathi55](https://github.com/Jagapathi55)
 
-## 📬 Contact
-For any inquiries or suggestions, reach out to [Your Name](mailto:your.email@example.com).
-
----
-
-Enjoy building and enhancing RateMyStore! 🚀
